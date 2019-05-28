@@ -1,0 +1,22 @@
+•	Note-Unit
+o	A Note-Unit consists of three things:
+	An octave
+	A key
+	A length
+o	It is in the form [Octave] [Key] [Length]
+	E.g. 4C4 would be a quarter-note of middle C.
+	The valid lengths are 1, 2, 4, 6, 7, 12, 16 and 24 tempo-periods, where one tempo-period is one standard delay. 
+	A key can be anything from C to B and a flat or sharp may be appended to it (b/#)
+	Octave ranges from 1 to 8
+o	
+o	Depending on other factors, the octave key can be assumed.
+•	Octave manipulation
+o	An Octave can be pre-specified for a range of notes by placing :X where X is the octave and this will only update unless another operation with “:” is called. This is a general convenience feature that improves clarity while reducing human error, as well as significantly reducing transcription time. 
+o	You can also manipulate octaves relatively, by using the call :<< or :>> where the former moves the octave down one and the other moves the octave up one. This is helpful for scales. 
+o	Even with these in place if you use the original designation for the octave (e.g. 4C4) in one of the notes, it will take priority for that note. This is helpful for large note jumps, but not necessary.  
+•	Item
+o	Each note-unit or octave manipulation takes an item. 
+o	Each item is separated by a comma (“,”) however spaces and tabs are ignored and can be used at will to improve clarity. 
+•	Staffs
+o	A series of notes is considered a staff and we can affix one staff with up to 255 notes (can be increased by using a 16-bit counter) to each channel to be played simultaneously.
+o	Each staff is encoded separately and placed into the assembler. 
